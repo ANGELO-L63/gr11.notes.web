@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Notes Tree</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="sidenav">
+        <p>Current Version: <code>3.2</code><br>Check changelog for details.</p>
+        <a href="index.html">Main Page</a>
+        <a href="./UPDATE LOGS.html">Change Log (Frequently Check)</a>
+        <a href="VERIFIED NOTES.html">Verified Notes</a>
+        <hr>
+        <a href="1st Semester/STEM - 1st Semester Index.html">1st Semester Intro</a>
+        <button class="dropdown-btn">Biology 1
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <button class="dropdown-btn">STEM_BIO11-I (1st Q)
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="1st Semester/Biology 1/STEM_BIO11-I/STEM_BIO11CT-Ia _ Cell Theory.html">Cell Theory</a>
+                <a href="1st Semester/Biology 1/STEM_BIO11-I/STEM_BIO11CM-Ib _ Types of Cells and Cell Modifica.html">Types of Cells and Cell Modification</a>          
+              </div>
+          </div>
+
+          <button class="dropdown-btn">Earth and Life Science
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <button class="dropdown-btn">STEM_ES11-I (1st Q)
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="1st Semester/Earth and Life Science/STEM_ES11-I/STEM_ES11TE-Ia _ The Earth, The Sub-systems, and t.html">The Earth, The Subsystems,and The Rock Forming Minerals</a>
+                <a href="1st Semester/Earth and Life Science/STEM_ES11-I/STEM_ES11CR-Ib _ Classifications of Rocks and Exog.html">Classifications of Rocks and Exogenic Processes</a>          
+              </div>
+          </div>
+
+          <button class="dropdown-btn">Oral Communication
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <button class="dropdown-btn">STEM_OC11-I (1st Q)
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="1st Semester/Oral Communication/STEM_OC11-I/STEM_OC11PC-Ia _ Process of Communication.html">Process of Communication</a>
+                <a href="1st Semester/Oral Communication/STEM_OC11-I/STEM_OC11MC-Ib _ Models of Communication.html">Models of Communication</a>          
+              </div>
+          </div>
+
+          <button class="dropdown-btn">Pre-Calculus
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <button class="dropdown-btn">STEM_PC11-I (1st Q)
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="1st Semester/Pre-Calculus/STEM_PC11-I/STEM_PC11AG-Ia _ Introduction to Conic Sections an.html">Introduction to Conic Sections and Circles</a>         
+              </div>
+          </div>
+        <hr>
+        <a href="2nd Semester/STEM - 2st Semester Index.html">2nd Semester Index</a>
+        <a href=""  onclick="showNoNotesMessage()">Basic Calculus</a>
+        <a href=""  onclick="showNoNotesMessage()">Chemistry 1</a>
+        <hr>
+        <a href="https://zeke105-newsletter.beehiiv.com/subscribe">Get Updates Here</a>
+      </div>
+
+      <script>
+        //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+       //* Function to show an alert message when an anchor tag is clicked */
+       function showNoNotesMessage() {
+            alert("No notes available for this subject yet.");
+        }
+      </script>
+</body>
+</html>
